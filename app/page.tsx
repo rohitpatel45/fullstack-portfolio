@@ -1,4 +1,6 @@
 import About from "@/components/About";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/Projects";
@@ -14,6 +16,8 @@ export default function Home() {
       <About />
       <Projects />
       <Technology />
+      <FAQ />
+      <Footer />
     </main>
   );
 }

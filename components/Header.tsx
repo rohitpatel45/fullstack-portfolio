@@ -12,7 +12,7 @@ const Header = () => {
     setMenuBar(!menubar);
   };
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 bg-white p-2">
       <div className="flex justify-between items-center">
         <div>
           {/* Logo */}
@@ -36,11 +36,11 @@ const Header = () => {
       </div>
 
       <div
-        className={`top-0 right-0  min-h-screen absolute bg-gray-400   ${
+        className={`top-0 right-0  min-h-screen absolute bg-[#DD2476]  ${
           menubar ? "flex w-80 justify-between p-10 " : "hidden sm:hidden"
         }`}
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-4 text-xl  font-medium">
           <Link href="/">Home</Link>
           <Link href="/podcast">Podcast</Link>
           <Link href="/blog">Blog</Link>
