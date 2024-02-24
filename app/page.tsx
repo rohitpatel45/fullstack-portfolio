@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/Projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <hr className="mt-2" />
       <HeroSection />
+      <About />
       <Projects />
       <Technology />
     </main>
