@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <hr className="mt-2" />
       <HeroSection />
       <About />

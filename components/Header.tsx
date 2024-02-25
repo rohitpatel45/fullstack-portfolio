@@ -16,7 +16,14 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <div>
           {/* Logo */}
-          <Image src="/logo.png" alt="" width={50} height={50} />
+          <Image
+            src="/logo.png"
+            alt=""
+            width={50}
+            height={50}
+            priority
+            style={{ width: "auto", height: "auto" }}
+          />
         </div>
         <div className="hidden md:inline-flex space-x-6 font-medium text-cyan-600">
           <Link href="/">Home</Link>
@@ -41,11 +48,21 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col space-y-4 text-xl  font-medium">
-          <Link href="/">Home</Link>
-          <Link href="/podcast">Podcast</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" onClick={() => setMenuBar(false)}>
+            Home
+          </Link>
+          <Link href="/podcast" onClick={() => setMenuBar(false)}>
+            Podcast
+          </Link>
+          <Link href="/blog" onClick={() => setMenuBar(false)}>
+            Blog
+          </Link>
+          <Link href="/about" onClick={() => setMenuBar(false)}>
+            About
+          </Link>
+          <Link href="/contact" onClick={() => setMenuBar(false)}>
+            Contact
+          </Link>
         </div>
         <XCircleIcon
           className="h-10 w-10 cursor-pointer"
