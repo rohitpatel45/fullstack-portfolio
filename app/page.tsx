@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/Projects";
 import Technology from "@/components/Technologies";
+import Users from "@/components/Users";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Projects />
       <Technology />
+      <Users />
       <FAQ />
       <Footer />
     </main>

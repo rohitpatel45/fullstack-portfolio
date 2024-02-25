@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 bg-white p-2">
       <div className="flex justify-between items-center">
-        <div>
+        <Link href="/">
           {/* Logo */}
           <Image
             src="/logo.png"
@@ -24,13 +24,19 @@ const Header = () => {
             priority
             style={{ width: "auto", height: "auto" }}
           />
-        </div>
+        </Link>
         <div className="hidden md:inline-flex space-x-6 font-medium text-cyan-600">
           <Link href="/">Home</Link>
           <Link href="/podcast">Podcast</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/signup" onClick={() => setMenuBar(false)}>
+            SignUp
+          </Link>
+          <Link href="/signin" onClick={() => setMenuBar(false)}>
+            SignIn
+          </Link>
         </div>
         <div>
           <MagnifyingGlassIcon className="h-10 w-10" />
@@ -43,11 +49,11 @@ const Header = () => {
       </div>
 
       <div
-        className={`top-0 right-0  min-h-screen absolute bg-[#DD2476]  ${
+        className={`top-0 right-0  min-h-screen absolute bg-black text-white  ${
           menubar ? "flex w-80 justify-between p-10 " : "hidden sm:hidden"
         }`}
       >
-        <div className="flex flex-col space-y-4 text-xl  font-medium">
+        <div className="flex flex-col space-y-4 font-extralight">
           <Link href="/" onClick={() => setMenuBar(false)}>
             Home
           </Link>
@@ -62,6 +68,14 @@ const Header = () => {
           </Link>
           <Link href="/contact" onClick={() => setMenuBar(false)}>
             Contact
+          </Link>
+        </div>
+        <div className="flex flex-col space-y-1 text-sm">
+          <Link href="/signup" onClick={() => setMenuBar(false)}>
+            SignUp
+          </Link>
+          <Link href="/signin" onClick={() => setMenuBar(false)}>
+            SignIn
           </Link>
         </div>
         <XCircleIcon

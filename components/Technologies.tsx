@@ -2,7 +2,6 @@ import Image from "next/image";
 import technologies from "../utils/technologies.json";
 
 const Technology = () => {
-  console.log(technologies);
   return (
     <div>
       <h1 className="text-center py-4">

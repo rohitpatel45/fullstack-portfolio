@@ -12,11 +12,11 @@ const HeroSection = () => {
           i know for you as long as i enjoy it
         </h3>
       </div>
-      <div className="flex flex-col items-center gap-6 text-center text-white font-bold md:mt-14 mt-6  lg:flex-row lg:justify-center">
-        <Link href="/about" className="py-4 bg-blue-500/80 w-80 rounded-sm">
+      <div className="flex flex-col items-center gap-6 text-center text-white  md:mt-14 mt-6  lg:flex-row lg:justify-center">
+        <Link href="/about" className="py-2 bg-blue-500/80 w-80 rounded-sm">
           Read More
         </Link>
-        <Link href="/podcast" className="py-4 bg-blue-500/80 w-80 rounded-sm">
+        <Link href="/podcast" className="py-2 bg-blue-500/80 w-80 rounded-sm">
           Listen to Podcast
         </Link>
       </div>

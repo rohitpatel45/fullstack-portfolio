@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const UserRegisterForm = () => {
   const [userName, setuserName] = useState();
@@ -31,12 +33,14 @@ const UserRegisterForm = () => {
       );
 
       const data = await response.json();
-      console.log(data);
-      if (!data) {
-        alert("Registration failed");
+
+      if (data.message === "User Already registered Please Login") {
+        router.push("/signin");
       }
-      alert("Registration successful");
-      router.push("/signin");
+
+      if (data.message === "User Created Successfully") {
+        router.push("/signin");
+      }
     } catch (error) {
       console.log(error);
     }
